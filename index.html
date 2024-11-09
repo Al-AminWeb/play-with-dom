@@ -2,22 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Play with Dom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play with DOM</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="tailwind.config.js"></script>
 </head>
-<body>
+<body class="bg-gray-50 min-h-screen flex flex-col items-center justify-center p-4 font-sans">
 
-<h1 id="title">Welcome to play with dom</h1>
+<!-- Heading -->
+<h1 id="title" class="text-5xl font-bold text-primary mb-8 animate-bounce">
+    Welcome to Play with DOM 🌐
+</h1>
 
-<ul id="li-container" class="lists">
-    <li class="li-items1">1st</li>
-    <li class="li-items2">2nd</li>
-    <li class="li-items3">3rd</li>
-    <li class="li-items4">4th</li>
-</ul>
-<h2>Lets traverse dom element</h2>
-<p>Lorem ipsum dolor sit amet, consectetur.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, delectus? </p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus.</p>
+<!-- List Section -->
+<div class="w-full max-w-lg bg-white shadow-lg rounded-xl p-6 mb-10">
+    <h2 class="text-2xl font-semibold text-gray-700 mb-6 text-center">DOM Traversal</h2>
+    <ul id="li-container" class="space-y-4">
+        <li class="li-item bg-blue-100 text-blue-800 p-4 rounded-md hover:bg-blue-200 transition">1st Item</li>
+        <li id="second" class="li-item bg-green-100 text-green-800 p-4 rounded-md hover:bg-green-200 transition">2nd Item</li>
+        <li class="li-item bg-yellow-100 text-yellow-800 p-4 rounded-md hover:bg-yellow-200 transition">3rd Item</li>
+        <li class="li-item bg-red-100 text-red-800 p-4 rounded-md hover:bg-red-200 transition">4th Item</li>
+    </ul>
+    <!-- Action Buttons -->
+    <div class="mt-8 flex justify-between">
+        <button id="highlight-btn" class="btn bg-primary text-white py-2 px-4 rounded-md hover:bg-purple-600 transition-all">Highlight 2nd Item</button>
+        <button id="reset-btn" class="btn bg-secondary text-white py-2 px-4 rounded-md hover:bg-yellow-500 transition-all">Reset</button>
+    </div>
+</div>
+
+<!-- Paragraph Section -->
+<div class="w-full max-w-lg bg-white shadow-lg rounded-xl p-6">
+    <h2 class="text-2xl font-semibold text-gray-700 mb-4 text-center">Explore Content</h2>
+    <p class="mb-4 text-gray-600 hover:text-primary transition-colors">Lorem ipsum dolor sit amet, consectetur.</p>
+    <p class="mb-4 text-gray-600 hover:text-secondary transition-colors">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="text-gray-600 hover:text-accent transition-colors">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus.</p>
+</div>
+
+<!-- JavaScript File -->
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daraz Lite 🛍 - Review Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+          href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+          rel="stylesheet"
+          type="text/css"
+  />
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col items-center">
+
+<!-- Header -->
+<h1 class="text-4xl sm:text-5xl text-center my-8 font-bold text-purple-600">Daraz Lite 🛍</h1>
+
+<!-- Review Input Section -->
+<div class="w-full max-w-lg mx-auto mb-8 p-6 bg-white shadow-lg rounded-xl">
+    <textarea
+            id="text-area"
+            placeholder="Leave a review..."
+            class="textarea textarea-bordered textarea-lg w-full h-32 mb-4 resize-none"
+    ></textarea>
+  <div class="text-right">
+    <button id="submit-btn" class="btn btn-success btn-wide">Submit Review</button>
+  </div>
+</div>
+
+<!-- User Reviews Section -->
+<div id="review" class="w-full max-w-lg mx-auto p-6 bg-white shadow-lg rounded-xl">
+  <h2 class="text-3xl font-bold text-red-600 mb-4 text-center">User Reviews</h2>
+  <div class="space-y-4" id="reviews-list">
+    <!-- Reviews will appear here dynamically -->
+  </div>
+</div>
+
+<!-- JavaScript File -->
+<script src="review.js"></script>
+</body>
+</html>
